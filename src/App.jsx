@@ -358,26 +358,26 @@ function TabBtn({ id, label, active, onClick, dark, isMobile }) {
   );
 }
 
-// ── Pipeline Step ─────────────────────────────────────────────────────────────
-function PipStep({ n, title, desc, index, T }) {
-  const [h, setH] = useState(false);
-  return (
-    <div onMouseEnter={()=>setH(true)} onMouseLeave={()=>setH(false)}
-      style={{ flexShrink:0, display:"flex", alignItems:"center" }}>
-      <div style={{
-        background:h?"rgba(99,102,241,0.12)":"rgba(99,102,241,0.06)",
-        border:`1px solid ${h?T.accent:"rgba(99,102,241,0.15)"}`,
-        borderRadius:14, padding:"12px 14px", textAlign:"center", minWidth:105,
-        animation:`cardIn 0.4s ease ${index*55}ms both`,
-        transform:h?"translateY(-2px)":"none", transition:"all 0.2s",
-      }}>
-        <div style={{ fontFamily:"'Sora',sans-serif", fontSize:"0.54rem", color:T.accent, fontWeight:800, letterSpacing:"0.1em", marginBottom:4 }}>STEP {n}</div>
-        <div style={{ fontSize:"0.76rem", fontWeight:700, color:T.text, marginBottom:2 }}>{title}</div>
-        <div style={{ fontSize:"0.6rem", color:T.sub, lineHeight:1.3 }}>{desc}</div>
-      </div>
-    </div>
-  );
-}
+// // ── Pipeline Step ─────────────────────────────────────────────────────────────
+// function PipStep({ n, title, desc, index, T }) {
+//   const [h, setH] = useState(false);
+//   return (
+//     <div onMouseEnter={()=>setH(true)} onMouseLeave={()=>setH(false)}
+//       style={{ flexShrink:0, display:"flex", alignItems:"center" }}>
+//       <div style={{
+//         background:h?"rgba(99,102,241,0.12)":"rgba(99,102,241,0.06)",
+//         border:`1px solid ${h?T.accent:"rgba(99,102,241,0.15)"}`,
+//         borderRadius:14, padding:"12px 14px", textAlign:"center", minWidth:105,
+//         animation:`cardIn 0.4s ease ${index*55}ms both`,
+//         transform:h?"translateY(-2px)":"none", transition:"all 0.2s",
+//       }}>
+//         <div style={{ fontFamily:"'Sora',sans-serif", fontSize:"0.54rem", color:T.accent, fontWeight:800, letterSpacing:"0.1em", marginBottom:4 }}>STEP {n}</div>
+//         <div style={{ fontSize:"0.76rem", fontWeight:700, color:T.text, marginBottom:2 }}>{title}</div>
+//         <div style={{ fontSize:"0.6rem", color:T.sub, lineHeight:1.3 }}>{desc}</div>
+//       </div>
+//     </div>
+//   );
+// }
 
 // ── MAIN APP ──────────────────────────────────────────────────────────────────
 export default function SentiScope() {
