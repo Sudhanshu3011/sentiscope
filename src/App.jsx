@@ -323,7 +323,7 @@ function HistItem({ item, dark, onClick }) {
 // ── Toast ─────────────────────────────────────────────────────────────────────
 function Toast({ msg, dark, onDone }) {
   const T = useTheme(dark);
-  useEffect(() => { const t = setTimeout(onDone, 2400); return () => clearTimeout(t); }, []);
+  useEffect(() => { const t = setTimeout(onDone, 2400); return () => clearTimeout(t); }, [onDone]);
   return (
     <div style={{ position:"fixed", bottom:24, right:16, left:16, zIndex:9999,
       background:dark?"rgba(13,20,36,0.97)":"rgba(255,255,255,0.97)",
